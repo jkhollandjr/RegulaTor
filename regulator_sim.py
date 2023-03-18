@@ -207,7 +207,7 @@ def simulate(file_name):
     both_output = sorted(download_packets + upload_packets, key=lambda x: x[0])
 
     #output to file
-    path = args.source_path + str(file_name)
+    path = args.output_path + str(file_name)
     with open(path, 'w') as w:
         for p in both_output:
             w.write(str(p[0]) + '\t' + str(p[1]) + '\n')
